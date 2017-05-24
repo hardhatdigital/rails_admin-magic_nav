@@ -1,0 +1,3 @@
+module RailsAdminMagicNav
+  # Your code goes here...
+end
