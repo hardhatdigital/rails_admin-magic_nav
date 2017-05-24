@@ -3,6 +3,10 @@ The Magic Nav, replaces Rails Admin's default navigation with a navigation that 
 
 ## Usage
 
+### Disable Magic Nav
+
+Set `magicNav.active = false` in `app/assets/javascripts/rails_admin/custom/ui.js`
+ 
 ## Installation
 Add this line to your application's Gemfile:
 
