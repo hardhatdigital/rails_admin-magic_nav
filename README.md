@@ -2,6 +2,39 @@
 The Magic Nav generator, replaces Rails Admin's default navigation with a navigation that can be customized by the developer.
 
 ## Usage
+By configuring the `config/rails_admin/magic_nav.yml` file within your application, the navigation can be controlled.
+
+#### Add a new section to the navigation
+
+Under the the appropriate section, add:
+
+```ruby
+name: "Section Name"
+      links:
+        - []
+```
+
+#### Add a direct link to a location in the admin
+
+Add the following under your section:
+
+```ruby
+name: "Section Name"
+      links:
+        - ["Link to list of Users", "user"]
+        - ["Link to list of Subscribers", "subscriber"]
+```
+
+#### Add A list of pages under a section
+
+```ruby
+name: "Section Name"
+      pages:
+        - name: "Products"
+          links:
+            - ["Add/Edit", "/product_service?model_name=product_service&scope=products"]
+```
+
 
 ### Disable Magic Nav
 
