@@ -19,15 +19,16 @@ And then execute:
 $ bundle
 ```
 
-Or install it yourself as:
-```bash
-$ gem install rails_admin_magic_nav
-```
-
 Run the generator command:
 ```ruby
 rails g rails_admin_magic_nav
 ````
+
+Add the following to your routes file:
+```ruby
+get 'magic_nav' => 'rails_admin/magic_nav#index'
+``
+
 
 ## Contributing
 Contribution directions go here.
