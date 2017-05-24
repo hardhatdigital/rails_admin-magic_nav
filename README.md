@@ -1,5 +1,5 @@
 # RailsAdminMagicNav
-The Magic Nav, replaces Rails Admin's default navigation with a navigation that can be customized by the developer.
+The Magic Nav generator, replaces Rails Admin's default navigation with a navigation that can be customized by the developer.
 
 ## Usage
 

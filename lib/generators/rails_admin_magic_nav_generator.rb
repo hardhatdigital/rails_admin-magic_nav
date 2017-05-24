@@ -14,5 +14,12 @@ class RailsAdminMagicNavGenerator < Rails::Generators::Base
     copy_file("app/assets/stylesheets/mixins.scss", "app/assets/stylesheets/rails_admin/custom/mixins.scss")
   end
   
+  def create_helpers
+    copy_file("app/helpers/magic_nav_helper.rb", "app/helpers/rails_admin/magic_nav_helper.rb")
+  end  
+
+  def create_controllers
+    copy_file("app/controllers/magic_nav_controller.rb", "app/controllers/rails_admin/magic_nav_controller.rb")
+  end  
 
 end
