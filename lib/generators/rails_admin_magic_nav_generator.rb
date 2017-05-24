@@ -1,5 +1,8 @@
 class RailsAdminMagicNavGenerator < Rails::Generators::Base
-  def create_initializer_file
-    create_file "config/initializers/rails_admin_magic_nav.rb", "# Add initialization content here"
+
+  source_root File.expand_path("../../../config", __FILE__)
+
+  def create_magic_nav_yml
+    copy_file("magic_nav.yml", "config/rails_admin/magic_nav.yml")
   end
 end
