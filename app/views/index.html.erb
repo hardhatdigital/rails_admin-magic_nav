@@ -1,0 +1,7 @@
+<div class="well col-sm-3 col-md-2 sidebar-nav" id="new-nav">
+  <% @nav["groupings"].each do |grouping| %>
+    <div class="sitemap-wrap">
+      <%= render partial: "grouping", locals: {grouping: grouping} %>
+    </div>
+  <% end %>
+</div>

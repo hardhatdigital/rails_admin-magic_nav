@@ -22,4 +22,9 @@ class RailsAdminMagicNavGenerator < Rails::Generators::Base
     copy_file("app/controllers/magic_nav_controller.rb", "app/controllers/rails_admin/magic_nav_controller.rb")
   end  
 
+  def create_views
+    copy_file("app/views/index.html.erb", "app/views/rails_admin/magic_nav/index.html.erb")
+    copy_file("app/views/_grouping.html.erb", "app/views/rails_admin/magic_nav/_grouping.html.erb")
+  end
+
 end

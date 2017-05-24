@@ -1,0 +1,40 @@
+<ul class="sitemap-list">
+  <% grouping["sections"].each_with_index do |section, i|  %>
+    <li class="sitemap-list__item">
+      <input class="sitemap-list__toggle" type="checkbox" id="<%= "#{section['name']}#{i}"  %>" value="" name="<%= section['name'] %>">
+      <label class="sitemap-list__label" for="<%= "#{section['name']}#{i}" %>"><%= section['name'] %> </label>
+
+      <ul class="sitemap-list">
+        <!-- LINKS -->
+        <% if section["links"] %>
+          <% section["links"].each do |link|  %>
+            <li class="sitemap-list__item">
+              <a href="<%= build_link link[1]  %>" data-model="<%= to_model_name link[1] %>" class="sitemap-list__link pjax"><%= link[0]  %></a>
+            </li>
+          <% end %>
+        <% end %>
+
+        <!-- PAGES -->
+        <% if section["pages"]  %>
+
+          <% section["pages"].each do |p|  %>
+            <li class="sitemap-list__item">
+              <input class="sitemap-list__toggle" type="checkbox" id="<%= "#{p['name'].parameterize}#{i}"  %>" value="" name="<%= "#{p['name'].parameterize}#{i}" %>">
+              <label class="sitemap-list__label" for="<%= "#{p['name'].parameterize}#{i}"  %>" ><%= p['name']  %></label>
+
+              <% if p["links"]  %>
+                <ul class="sitemap-list">
+                  <% p["links"].each do |l|  %>
+                    <li class="sitemap-list__item">
+                      <a href="<%= build_link l[1]  %>" data-model="<%= to_model_name l[1] %>" class="sitemap-list__link pjax"><%= l[0]  %></a>
+                    </li>
+                  <% end  %>
+                </ul>
+              <% end  %>
+            </li><!-- sub level -->
+          <% end  %>
+        <% end  %>
+      </ul>
+    </li><!-- top level -->
+  <% end  %>
+</ul>
