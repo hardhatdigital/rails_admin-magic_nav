@@ -1,0 +1,11 @@
+groupings:
+#primary sections of the nav
+  - sections:
+    - name: "Primary Section 1"
+      links: 
+      - ["generic link", "some/path"]
+#secondary sections of the nav
+  - sections:
+    - name: "Secondary Section 1"
+      links:
+        - ["generic link", "some/path"]
