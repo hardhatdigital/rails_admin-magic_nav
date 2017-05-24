@@ -1,8 +1,7 @@
 # RailsAdminMagicNav
-Short description and motivation.
+The Magic Nav, replaces Rails Admin's default navigation with a navigation that can be customized by the developer.
 
 ## Usage
-How to use my plugin.
 
 ## Installation
 Add this line to your application's Gemfile:
@@ -20,6 +19,11 @@ Or install it yourself as:
 ```bash
 $ gem install rails_admin_magic_nav
 ```
+
+Run the generator command:
+```ruby
+rails g rails_admin_magic_nav
+````
 
 ## Contributing
 Contribution directions go here.

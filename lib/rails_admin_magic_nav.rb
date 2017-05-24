@@ -1,3 +1,7 @@
 module RailsAdminMagicNav
-  # Your code goes here...
+
+#  route "get 'magic_nav' => 'rails_admin/magic_nav#index'"
+
 end
+
+
