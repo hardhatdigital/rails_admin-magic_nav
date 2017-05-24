@@ -27,4 +27,8 @@ class RailsAdminMagicNavGenerator < Rails::Generators::Base
     copy_file("app/views/_grouping.html.erb", "app/views/rails_admin/magic_nav/_grouping.html.erb")
   end
 
+  def copy_assets
+    directory("app/assets/images", "public/admin-assets")
+  end
+
 end
