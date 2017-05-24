@@ -14,7 +14,7 @@ name: "Section Name"
         - []
 ```
 
-#### Add a direct link to a location in the admin
+#### Add direct links to a location in the admin
 
 Add the following under your section:
 
@@ -35,6 +35,15 @@ name: "Section Name"
             - ["Add/Edit", "/product_service?model_name=product_service&scope=products"]
 ```
 
+### Add a link that searches for a particular record by slug
+
+Replace your link with something similar to the following:
+
+```ruby
+name: "Products"
+      links:
+        - ["Product A", "{{FIND}}|product|{{HAS_SLUG}}|slug-of-product-a"]
+```
 
 ### Disable Magic Nav
 
