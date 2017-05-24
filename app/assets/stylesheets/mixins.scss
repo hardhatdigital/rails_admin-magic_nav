@@ -1,0 +1,129 @@
+//
+// EXTENSION OF RAILS ADMIN STYLES
+//
+
+//Hide the old stuff
+#old-nav { display: none; }
+#new-nav{
+  max-width: 400px;
+  width: 24% !important;
+}
+.ra-multiselect-item-add-all, 
+.ra-multiselect-search {display: none !important;}
+.sitemap-wrap{
+  margin-bottom: 100px;
+}
+.sitemap-list{
+  background: #f8f8f8;
+  list-style: none;
+  font-size: 16px;
+  margin: 0;
+  padding: 0;
+  //padding: 0 0 0 24px;
+
+  li:last-child{
+    border-bottom: none;
+  }
+}
+.sitemap-list__label{
+  border-bottom: 1px solid #e7e7e7;
+  border-left: 3px solid #fff;
+  color: #333;
+  cursor: pointer;
+  display: block;
+  font: bold 1em/2.75 Helvetica, Arial, Sans-serif;
+  margin: 0;
+  position: relative;
+
+  &:after{
+    background: #428bca;
+    content: "";
+    display: block;
+    height: 1px;
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    width: 17px;
+  }
+  &:before{
+    background: #428bca;
+    content: "";
+    height: 17px;
+    position: absolute;
+    right: 23px;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1px;
+  }
+}
+.sitemap-list__link{
+  background: url(/admin-assets/icon-edit.png) right 14px center no-repeat;
+  border-bottom: 1px solid #e7e7e7;
+  border-left: 3px solid #fff;
+  cursor: pointer;
+  display: block;
+  font: bold 1em/2.75 Helvetica, Arial, Sans-serif;
+  position: relative;
+}
+.sitemap-list__toggle{
+  display: none;
+  & ~ .sitemap-list > .sitemap-list__item{ display: none; }
+  &:checked{
+    & + .sitemap-list__label{
+      border-left: 3px solid #428bca;
+      &:before{opacity: 0;}
+    }
+    & ~ .sitemap-list > .sitemap-list__item{
+      display: block;
+    }
+  }
+}
+
+
+// Indentation.
+
+.sitemap-list:first-child{
+  & > .sitemap-list__item{
+    & > .sitemap-list__label{background: #fff; text-transform: uppercase; padding-left: 24px;}
+    & > .sitemap-list > .sitemap-list__item {
+     & > .sitemap-list__link,
+     & > .sitemap-list__label{ padding-left: 48px; }
+     & > .sitemap-list > .sitemap-list__item{
+       & .sitemap-list__link,
+       & .sitemap-list__label{
+         padding-left: 72px;
+       }
+     }
+    } 
+  }
+}
+
+
+
+//second set styles for the additional stuff.
+
+.sitemap-wrap:nth-child(2){
+  border-top: 1px solid #e7e7e7;
+
+  .sitemap-list__label{background: none !important;}
+}
+//hide elements that don't want the client to see
+//can't use display:none; or js error
+#content_block_page_container_id_field {
+  visibility:hidden;
+  height:0px;
+}
+#content_block_product_service_id_field {
+  visibility:hidden;
+  height:0px;
+}
+//hide filters on some of the models
+form.pjax-form{
+  &[action*="intro_block"],
+  &[action*="content_block"]{
+    #filters_box, hr.filters_box{
+      display: none;
+    }
+  }
+} 
+
