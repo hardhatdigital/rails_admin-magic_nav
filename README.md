@@ -1,5 +1,5 @@
 # RailsAdminMagicNav
-The Magic Nav generator, replaces Rails Admin's default navigation with a navigation that can be customized by the developer.
+The Rails Admin Magic Nav generator, replaces [Rails Admin](https://github.com/sferik/rails_admin)'s default navigation with a navigation that can be customized by the developer.
 
 ## Usage
 By configuring the `config/rails_admin/magic_nav.yml` file within your application, the navigation can be controlled.
@@ -25,7 +25,7 @@ name: "Section Name"
         - ["Link to list of Subscribers", "subscriber"]
 ```
 
-#### Add A list of pages under a section
+#### Add a list of pages under a section
 
 ```ruby
 name: "Section Name"
@@ -47,7 +47,7 @@ name: "Products"
 
 #### Find a set of records that belongs_to another record
 
-Find all `intro_blocks` and that belong to the `page_conatiner` of slug `what-we-do`
+Find all `intro_blocks` that belong to the `page_conatiner` of slug `what-we-do`
 
 ```ruby
 name: "Products"
@@ -79,7 +79,7 @@ rails g rails_admin_magic_nav
 Add the following to your routes file:
 ```ruby
 get 'magic_nav' => 'rails_admin/magic_nav#index'
-``
+```
 
 
 ## Contributing
