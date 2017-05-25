@@ -63,7 +63,7 @@ Set `magicNav.active = false` in `app/assets/javascripts/rails_admin/custom/ui.j
 Add this line to your application's Gemfile:
 
 ```ruby
-gem 'rails_admin_magic_nav', :git => 'https://github.com/hardhatdigital/rails-admin-magic-nav'
+gem 'rails_admin_magic_nav', :git => 'https://github.com/hardhatdigital/rails_admin-magic_nav'
 ```
 
 And then execute:
